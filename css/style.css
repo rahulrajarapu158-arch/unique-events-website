@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #4a4a4a;
     line-height: 1.7;
     background: #fefaf6;
@@ -282,27 +282,31 @@ em {
     color: #fff;
 }
 
-.hero-indicators {
+.hero-scroll {
     position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #999;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(184, 134, 11, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
+.scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(180deg, rgba(184,134,11,0.8) 0%, transparent 100%);
+    animation: scrollPulse 2s ease-in-out infinite;
 }
 
-.indicator.active {
-    background: #b8860b;
-    transform: scale(1.2);
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
 }
 
 /* ===== SECTIONS ===== */
@@ -512,6 +516,10 @@ em {
 
 .gallery-item.tall {
     grid-row: span 2;
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
 }
 
 .gallery-item img {
@@ -788,6 +796,10 @@ em {
 
     .gallery-item.tall {
         grid-row: span 1;
+    }
+
+    .gallery-item.wide {
+        grid-column: span 1;
     }
 
     .cta-contact {
