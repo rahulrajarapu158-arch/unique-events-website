@@ -1,58 +1,78 @@
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.header')) {
+                nav.classList.remove('active');
+            }
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
             });
-        }
-    });
-});
-
-// Header background on scroll
-const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(10, 10, 10, 0.95)';
-    } else {
-        header.style.background = 'rgba(10, 10, 10, 0.9)';
+        });
     }
-});
 
-// Intersection Observer for scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+    // Hero slider
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(ind => ind.classList.remove('active'));
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+    }
+
+    if (slides.length > 0) {
+        slideInterval = setInterval(nextSlide, 5000);
+
+        indicators.forEach((ind, i) => {
+            ind.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(i);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
+    }
+
+    // Header background on scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(254, 250, 246, 0.98)';
+        } else {
+            header.style.background = 'rgba(254, 250, 246, 0.97)';
         }
     });
-}, observerOptions);
-
-// Animate elements on scroll
-document.querySelectorAll('.service-card, .gallery-item, .stat').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
 });
-
-// Testimonials slider
-const testimonials = document.querySelectorAll('.testimonial');
-let currentTestimonial = 0;
-
-if (testimonials.length > 0) {
-    setInterval(() => {
-        testimonials[currentTestimonial].style.display = 'none';
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        testimonials[currentTestimonial].style.display = 'block';
-    }, 5000);
-}

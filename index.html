@@ -7,7 +7,7 @@
     <meta name="description" content="Unique Events & Wedding Planner's, Hanamkonda - Professional wedding planning, decoration, and event management. Book now for your special day.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,56 +16,89 @@
 <header class="header">
     <div class="header-inner">
         <a href="#" class="logo">
-            <span class="logo-mark">UE</span>
-            <span class="logo-full">UNIQUE EVENTS</span>
+            <span class="logo-icon">U</span>
+            <div class="logo-text">
+                <span class="logo-name">Unique Events</span>
+                <span class="logo-tagline">Wedding Planner's</span>
+            </div>
         </a>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="tel:+918460378779" class="cta-btn">Call Now</a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </header>
 
 <!-- Hero -->
-<section class="hero">
-    <div class="hero-bg">
-        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&h=1080&fit=crop" alt="Wedding Events">
-        <div class="hero-overlay"></div>
+<section id="home" class="hero">
+    <div class="hero-slider">
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&h=1080&fit=crop');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&h=1080&fit=crop');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1920&h=1080&fit=crop');"></div>
     </div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-        <p class="hero-subtitle">HANAMKONDA • WARANGAL</p>
-        <h1 class="hero-title">Crafting <em>Unforgettable</em><br>Celebrations</h1>
-        <a href="https://wa.me/918460378779?text=Hi%20Unique%20Events%2C%20I%20want%20to%20plan%20my%20event" class="hero-cta" target="_blank">
-            Plan Your Event
-        </a>
+        <p class="hero-subtitle">Creating Magical Moments Since Years</p>
+        <h1 class="hero-title">Your Dream Event,<br><em>Beautifully Crafted</em></h1>
+        <p class="hero-desc">From intimate gatherings to grand celebrations, we bring your vision to life with creativity and precision.</p>
+        <div class="hero-actions">
+            <a href="#gallery" class="btn btn-primary">View Our Work</a>
+            <a href="https://wa.me/918460378779?text=Hi%20Unique%20Events%2C%20I%20want%20to%20plan%20my%20event" class="btn btn-outline" target="_blank">Get Quote</a>
+        </div>
     </div>
-    <div class="hero-scroll">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+    <div class="hero-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
     </div>
 </section>
 
-<!-- Marquee -->
-<div class="marquee">
-    <div class="marquee-track">
-        <span>WEDDING PLANNING</span><span>★</span>
-        <span>DECORATION</span><span>★</span>
-        <span>DJ & SOUND</span><span>★</span>
-        <span>CATERING</span><span>★</span>
-        <span>WEDDING PLANNING</span><span>★</span>
-        <span>DECORATION</span><span>★</span>
-        <span>DJ & SOUND</span><span>★</span>
-        <span>CATERING</span><span>★</span>
-    </div>
-</div>
-
 <!-- About -->
-<section class="about">
+<section id="about" class="about">
     <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">WHO WE ARE</span>
+            <h2 class="section-title">About <em>Us</em></h2>
+        </div>
         <div class="about-grid">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=800&fit=crop" alt="About Unique Events">
+            <div class="about-images">
+                <div class="about-img-main">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=500&h=600&fit=crop" alt="Wedding Setup">
+                </div>
+                <div class="about-img-small">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=300&h=400&fit=crop" alt="Decoration">
+                </div>
             </div>
             <div class="about-content">
-                <p class="section-label">ABOUT US</p>
-                <h2 class="section-title">Where <em>Dreams</em><br>Come Alive</h2>
-                <p class="about-text">With over 303 happy clients and a perfect 4.9 rating, we've been creating magical celebrations across Warangal. From intimate gatherings to grand weddings, every event we touch becomes a memory forever.</p>
+                <p class="about-intro">We are a team of passionate event creators based in Hanamkonda, Warangal.</p>
+                <p class="about-text">With over 303 happy clients and a perfect 4.9 rating, we've been crafting unforgettable celebrations across Telangana. From traditional weddings to modern receptions, every event is a canvas for our creativity.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <span class="feature-icon">✓</span>
+                        <span>Complete Event Planning</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">✓</span>
+                        <span>Custom Decoration</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">✓</span>
+                        <span>Professional DJ & Sound</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">✓</span>
+                        <span>Multi-cuisine Catering</span>
+                    </div>
+                </div>
                 <div class="about-stats">
                     <div class="stat">
                         <span class="stat-number">303+</span>
@@ -86,68 +119,96 @@
 </section>
 
 <!-- Services -->
-<section class="services">
+<section id="services" class="services">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">WHAT WE DO</p>
+            <span class="section-subtitle">WHAT WE OFFER</span>
             <h2 class="section-title">Our <em>Services</em></h2>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <span class="service-number">01</span>
-                <h3>Wedding Planning</h3>
-                <p>Complete wedding planning — from venue selection to coordination. Your perfect day, flawlessly executed.</p>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=400&h=300&fit=crop" alt="Wedding Planning">
+                </div>
+                <div class="service-content">
+                    <h3>Wedding Planning</h3>
+                    <p>Complete wedding planning — from venue selection to coordination. Your perfect day, flawlessly executed.</p>
+                </div>
             </div>
             <div class="service-card">
-                <span class="service-number">02</span>
-                <h3>Decoration</h3>
-                <p>Stunning floral arrangements, mandap designs, and theme decorations that transform any venue.</p>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop" alt="Decoration">
+                </div>
+                <div class="service-content">
+                    <h3>Decoration</h3>
+                    <p>Stunning floral arrangements, mandap designs, and theme decorations that transform any venue.</p>
+                </div>
             </div>
             <div class="service-card">
-                <span class="service-number">03</span>
-                <h3>DJ & Sound</h3>
-                <p>Professional DJ, sound systems, and lighting to keep your celebration energetic all night.</p>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&h=300&fit=crop" alt="DJ & Sound">
+                </div>
+                <div class="service-content">
+                    <h3>DJ & Sound</h3>
+                    <p>Professional DJ, sound systems, and lighting to keep your celebration energetic all night.</p>
+                </div>
             </div>
             <div class="service-card">
-                <span class="service-number">04</span>
-                <h3>Catering</h3>
-                <p>Delicious multi-cuisine catering for all events — weddings, receptions, and parties.</p>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=400&h=300&fit=crop" alt="Catering">
+                </div>
+                <div class="service-content">
+                    <h3>Catering</h3>
+                    <p>Delicious multi-cuisine catering for all events — weddings, receptions, and parties.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Gallery -->
-<section class="gallery">
+<section id="gallery" class="gallery">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">PORTFOLIO</p>
-            <h2 class="section-title">Our <em>Work</em></h2>
+            <span class="section-subtitle">OUR PORTFOLIO</span>
+            <h2 class="section-title">Event <em>Gallery</em></h2>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item large">
-                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=1000&fit=crop" alt="Wedding Setup">
-                <div class="gallery-overlay"><span>Wedding Setup</span></div>
+            <div class="gallery-item tall">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=500&h=700&fit=crop" alt="Wedding">
+                <div class="gallery-overlay">
+                    <span>Wedding Setup</span>
+                </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500&h=600&fit=crop" alt="Decoration">
-                <div class="gallery-overlay"><span>Decoration</span></div>
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500&h=340&fit=crop" alt="Decoration">
+                <div class="gallery-overlay">
+                    <span>Decoration</span>
+                </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&h=600&fit=crop" alt="Events">
-                <div class="gallery-overlay"><span>Events</span></div>
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&h=340&fit=crop" alt="Party">
+                <div class="gallery-overlay">
+                    <span>Party</span>
+                </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=500&h=600&fit=crop" alt="Party">
-                <div class="gallery-overlay"><span>Party</span></div>
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=500&h=340&fit=crop" alt="Celebration">
+                <div class="gallery-overlay">
+                    <span>Celebration</span>
+                </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=500&h=600&fit=crop" alt="Catering">
-                <div class="gallery-overlay"><span>Catering</span></div>
+                <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=500&h=340&fit=crop" alt="Catering">
+                <div class="gallery-overlay">
+                    <span>Catering</span>
+                </div>
             </div>
-            <div class="gallery-item wide">
-                <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1000&h=500&fit=crop" alt="Celebration">
-                <div class="gallery-overlay"><span>Celebration</span></div>
+            <div class="gallery-item tall">
+                <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=500&h=700&fit=crop" alt="Events">
+                <div class="gallery-overlay">
+                    <span>Events</span>
+                </div>
             </div>
         </div>
     </div>
@@ -157,34 +218,60 @@
 <section class="testimonials">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">KIND WORDS</p>
-            <h2 class="section-title">Client <em>Love</em></h2>
+            <span class="section-subtitle">KIND WORDS</span>
+            <h2 class="section-title">What Clients <em>Say</em></h2>
         </div>
-        <div class="testimonials-slider">
-            <div class="testimonial">
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-text">"The decoration was beyond our expectations! Every detail was perfect. Best wedding planner in Warangal hands down."</p>
-                <span class="testimonial-author">— Priya & Rahul</span>
+                <div class="testimonial-author">
+                    <span class="author-name">Priya & Rahul</span>
+                    <span class="author-event">Wedding Reception</span>
+                </div>
             </div>
-            <div class="testimonial">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-text">"Our reception was magical. The team handled everything professionally. Highly recommended!"</p>
-                <span class="testimonial-author">— Sneha & Vikram</span>
+                <div class="testimonial-author">
+                    <span class="author-name">Sneha & Vikram</span>
+                    <span class="author-event">Wedding</span>
+                </div>
             </div>
-            <div class="testimonial">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-text">"Amazing work! The DJ and lighting made our party unforgettable. Will definitely book again."</p>
-                <span class="testimonial-author">— Anil & Meena</span>
+                <div class="testimonial-author">
+                    <span class="author-name">Anil & Meena</span>
+                    <span class="author-event">Birthday Party</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section">
+<section id="contact" class="cta-section">
     <div class="container">
-        <h2>Ready to Plan Your<br><em>Perfect Event?</em></h2>
-        <p>Let's discuss your vision. Every celebration deserves to be extraordinary.</p>
-        <div class="cta-buttons">
-            <a href="tel:+918460378779" class="btn-call">Call Now</a>
-            <a href="https://wa.me/918460378779?text=Hi%20Unique%20Events%2C%20I%20want%20to%20plan%20my%20event" class="btn-whatsapp" target="_blank">WhatsApp Us</a>
+        <div class="cta-content">
+            <span class="section-subtitle">LET'S CONNECT</span>
+            <h2 class="section-title">Ready to Plan Your <em>Perfect Event?</em></h2>
+            <p>Let's discuss your vision. Every celebration deserves to be extraordinary.</p>
+            <div class="cta-contact">
+                <a href="tel:+918460378779" class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>+91 84603 78779</span>
+                </a>
+                <a href="https://wa.me/918460378779?text=Hi%20Unique%20Events%2C%20I%20want%20to%20plan%20my%20event" class="contact-item" target="_blank">
+                    <span class="contact-icon">💬</span>
+                    <span>WhatsApp Us</span>
+                </a>
+                <span class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>Hanamkonda, Warangal</span>
+                </span>
+            </div>
+            <p class="cta-hours">Mon - Sat: 10:00 AM - 8:00 PM</p>
         </div>
     </div>
 </section>
@@ -192,16 +279,19 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
-        <div class="footer-top">
-            <span class="logo-mark">UE</span>
-            <p>Unique Events & Wedding Planner's</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">U</span>
+                <div class="logo-text">
+                    <span class="logo-name">Unique Events</span>
+                    <span class="logo-tagline">Wedding Planner's</span>
+                </div>
+            </div>
+            <p class="footer-tagline">Creating magical moments in Warangal</p>
         </div>
-        <div class="footer-contact">
-            <a href="tel:+918460378779">+91 84603 78779</a>
-            <span>•</span>
-            <span>Hanamkonda, Warangal</span>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Unique Events & Wedding Planner's. All rights reserved.</p>
         </div>
-        <p class="copyright">&copy; 2026 Unique Events. All rights reserved.</p>
     </div>
 </footer>
 
