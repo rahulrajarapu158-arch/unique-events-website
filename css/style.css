@@ -13,7 +13,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #1a1a1a;
     line-height: 1.6;
-    background: #0a0a0a;
+    background: #0f1629;
     overflow-x: hidden;
 }
 
@@ -51,7 +51,7 @@ em {
     right: 0;
     z-index: 100;
     padding: 24px 40px;
-    background: rgba(10, 10, 10, 0.9);
+    background: rgba(15, 22, 41, 0.95);
     backdrop-filter: blur(10px);
 }
 
@@ -72,8 +72,8 @@ em {
 .logo-mark {
     width: 48px;
     height: 48px;
-    background: #d4af37;
-    color: #0a0a0a;
+    background: linear-gradient(135deg, #c9a227 0%, #8b6914 100%);
+    color: #0f1629;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -115,7 +115,7 @@ em {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 100%);
+    background: linear-gradient(180deg, rgba(15,22,41,0.4) 0%, rgba(15,22,41,0.8) 100%);
 }
 
 .hero-content {
@@ -130,7 +130,7 @@ em {
     font-size: 0.75rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #d4af37;
+    color: #c9a227;
     margin-bottom: 24px;
 }
 
@@ -142,15 +142,15 @@ em {
 }
 
 .hero-title em {
-    color: #d4af37;
+    color: #c9a227;
     font-style: italic;
 }
 
 .hero-cta {
     display: inline-block;
     padding: 16px 48px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
+    border: 1px solid #c9a227;
+    color: #c9a227;
     font-size: 0.8rem;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -158,8 +158,8 @@ em {
 }
 
 .hero-cta:hover {
-    background: #d4af37;
-    color: #0a0a0a;
+    background: #c9a227;
+    color: #0f1629;
 }
 
 .hero-scroll {
@@ -180,7 +180,7 @@ em {
 .scroll-line {
     width: 1px;
     height: 60px;
-    background: linear-gradient(180deg, rgba(212,175,55,0.8) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(201,162,39,0.8) 0%, transparent 100%);
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -191,7 +191,7 @@ em {
 
 /* ===== MARQUEE ===== */
 .marquee {
-    background: #d4af37;
+    background: linear-gradient(90deg, #c9a227 0%, #8b6914 100%);
     padding: 16px 0;
     overflow: hidden;
 }
@@ -208,7 +208,7 @@ em {
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #0a0a0a;
+    color: #0f1629;
 }
 
 @keyframes marquee {
@@ -219,7 +219,7 @@ em {
 /* ===== ABOUT ===== */
 .about {
     padding: 120px 0;
-    background: #0a0a0a;
+    background: #0f1629;
 }
 
 .about-grid {
@@ -244,7 +244,7 @@ em {
     font-size: 0.7rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #d4af37;
+    color: #c9a227;
     margin-bottom: 20px;
 }
 
@@ -257,7 +257,7 @@ em {
 }
 
 .section-title em {
-    color: #d4af37;
+    color: #c9a227;
 }
 
 .about-text {
@@ -281,7 +281,7 @@ em {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem;
     font-weight: 300;
-    color: #d4af37;
+    color: #c9a227;
     line-height: 1;
 }
 
@@ -296,7 +296,7 @@ em {
 /* ===== SERVICES ===== */
 .services {
     padding: 120px 0;
-    background: #111;
+    background: #151d33;
 }
 
 .services .section-header {
@@ -319,7 +319,7 @@ em {
 }
 
 .service-card:hover {
-    border-color: #d4af37;
+    border-color: #c9a227;
     transform: translateY(-4px);
 }
 
@@ -327,7 +327,7 @@ em {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem;
     font-weight: 300;
-    color: #d4af37;
+    color: #c9a227;
     opacity: 0.4;
     display: block;
     margin-bottom: 20px;
@@ -349,7 +349,7 @@ em {
 /* ===== GALLERY ===== */
 .gallery {
     padding: 120px 0;
-    background: #0a0a0a;
+    background: #0f1629;
 }
 
 .gallery .section-header {
@@ -393,7 +393,7 @@ em {
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10,10,10,0.4);
+    background: rgba(15,22,41,0.4);
     display: flex;
     align-items: flex-end;
     padding: 24px;
@@ -415,7 +415,7 @@ em {
 /* ===== TESTIMONIALS ===== */
 .testimonials {
     padding: 120px 0;
-    background: #111;
+    background: #151d33;
 }
 
 .testimonials .section-header {
@@ -447,31 +447,31 @@ em {
     font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #d4af37;
+    color: #c9a227;
 }
 
 /* ===== CTA ===== */
 .cta-section {
     padding: 120px 0;
-    background: #d4af37;
+    background: linear-gradient(135deg, #c9a227 0%, #8b6914 100%);
     text-align: center;
 }
 
 .cta-section h2 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 300;
-    color: #0a0a0a;
+    color: #0f1629;
     margin-bottom: 20px;
 }
 
 .cta-section h2 em {
     font-style: italic;
-    color: #0a0a0a;
+    color: #0f1629;
 }
 
 .cta-section p {
     font-size: 1.1rem;
-    color: rgba(10,10,10,0.7);
+    color: rgba(15,22,41,0.7);
     margin-bottom: 40px;
 }
 
@@ -492,29 +492,29 @@ em {
 }
 
 .btn-call {
-    background: #0a0a0a;
-    color: #d4af37;
+    background: #0f1629;
+    color: #c9a227;
 }
 
 .btn-call:hover {
-    background: #1a1a1a;
+    background: #1a2442;
 }
 
 .btn-whatsapp {
     background: transparent;
-    color: #0a0a0a;
-    border: 2px solid #0a0a0a;
+    color: #0f1629;
+    border: 2px solid #0f1629;
 }
 
 .btn-whatsapp:hover {
-    background: #0a0a0a;
-    color: #d4af37;
+    background: #0f1629;
+    color: #c9a227;
 }
 
 /* ===== FOOTER ===== */
 .footer {
     padding: 60px 0 40px;
-    background: #0a0a0a;
+    background: #0f1629;
     text-align: center;
 }
 
@@ -547,7 +547,7 @@ em {
 }
 
 .footer-contact a:hover {
-    color: #d4af37;
+    color: #c9a227;
 }
 
 .copyright {
