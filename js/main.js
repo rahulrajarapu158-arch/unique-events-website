@@ -16,9 +16,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(10, 10, 10, 0.95)';
+        header.style.background = 'rgba(250, 246, 241, 0.98)';
+        header.style.borderBottomColor = 'rgba(45, 32, 22, 0.08)';
     } else {
-        header.style.background = 'rgba(10, 10, 10, 0.9)';
+        header.style.background = 'rgba(250, 246, 241, 0.9)';
+        header.style.borderBottomColor = 'rgba(45, 32, 22, 0.06)';
     }
 });
 
@@ -38,21 +40,9 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Animate elements on scroll
-document.querySelectorAll('.service-card, .gallery-item, .stat').forEach(el => {
+document.querySelectorAll('.service-item, .work-item, .stat, .testimonial').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
-
-// Testimonials slider
-const testimonials = document.querySelectorAll('.testimonial');
-let currentTestimonial = 0;
-
-if (testimonials.length > 0) {
-    setInterval(() => {
-        testimonials[currentTestimonial].style.display = 'none';
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        testimonials[currentTestimonial].style.display = 'block';
-    }, 5000);
-}
